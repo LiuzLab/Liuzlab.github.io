@@ -22,10 +22,10 @@ description: "A
             context engineering 
             —the deliberate design of domain-aware tool environments and information scaffolding—in reshaping the role of model scale in genomics. MARRVEL-MCP equips LLMs with 39 tools spanning gene and variant utilities, pathogenicity databases, phenotype resources, expression atlases, ortholog data, and literature APIs. Without hard-coded pipelines, LLMs autonomously infer workflows, performing named-entity recognition, identifier normalization, and multi-database synthesis from narrative queries. 
            
-          Using 45 expert-curated questions, lightweight models (3B–20B parameters) with MARRVEL-MCP matched or outperformed larger models lacking tool access. A 20B-parameter model (gpt-oss-20b) achieved a 95% pass rate versus 33% without MARRVEL-MCP, approaching state-of-the-art proprietary performance. Although accuracy remains below the 100% required for autonomous diagnosis and token usage is considerable, these results show that well-designed context can compensate for limited model capacity. 
+          Using 45 expert-curated questions, lightweight models (3B–20B parameters) with MARRVEL-MCP matched or outperformed larger models lacking tool access. A 20B-parameter model (gpt-oss-20b) achieved a 95\\% pass rate versus 33\\% without MARRVEL-MCP, approaching state-of-the-art proprietary performance. Although accuracy remains below the 100\\% required for autonomous diagnosis and token usage is considerable, these results show that well-designed context can compensate for limited model capacity. 
            
             These findings establish context engineering as a core principle for biomedical AI, enabling efficient, scalable integration of LLMs with curated genomic resources. MARRVEL-MCP is available at 
-            https://github.com/hyunhwan-bcm/MARRVEL\_MCP/ 
+            https://github.com/hyunhwan-bcm/MARRVEL\\_MCP/ 
             ."
 featured: false
 ---
@@ -38,7 +38,7 @@ A
             context engineering 
             —the deliberate design of domain-aware tool environments and information scaffolding—in reshaping the role of model scale in genomics. MARRVEL-MCP equips LLMs with 39 tools spanning gene and variant utilities, pathogenicity databases, phenotype resources, expression atlases, ortholog data, and literature APIs. Without hard-coded pipelines, LLMs autonomously infer workflows, performing named-entity recognition, identifier normalization, and multi-database synthesis from narrative queries. 
            
-          Using 45 expert-curated questions, lightweight models (3B–20B parameters) with MARRVEL-MCP matched or outperformed larger models lacking tool access. A 20B-parameter model (gpt-oss-20b) achieved a 95% pass rate versus 33% without MARRVEL-MCP, approaching state-of-the-art proprietary performance. Although accuracy remains below the 100% required for autonomous diagnosis and token usage is considerable, these results show that well-designed context can compensate for limited model capacity. 
+          Using 45 expert-curated questions, lightweight models (3B–20B parameters) with MARRVEL-MCP matched or outperformed larger models lacking tool access. A 20B-parameter model (gpt-oss-20b) achieved a 95\% pass rate versus 33\% without MARRVEL-MCP, approaching state-of-the-art proprietary performance. Although accuracy remains below the 100\% required for autonomous diagnosis and token usage is considerable, these results show that well-designed context can compensate for limited model capacity. 
            
             These findings establish context engineering as a core principle for biomedical AI, enabling efficient, scalable integration of LLMs with curated genomic resources. MARRVEL-MCP is available at 
             https://github.com/hyunhwan-bcm/MARRVEL\_MCP/ 

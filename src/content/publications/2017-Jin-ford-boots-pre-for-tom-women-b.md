@@ -1,8 +1,8 @@
 ---
-title: "Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 & screw. chiguire53. com"
+title: "Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 \\& screw. chiguire53. com"
 authors: ["Haijing Jin", "Ying-Wooi Wan", "Zhandong Liu"]
 year: 2017
-venue: "Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 & screw. chiguire53. com"
+venue: "Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 \\& screw. chiguire53. com"
 type: "paper"
 cover: "../../assets/paper-vision.jpg"
 links:
@@ -12,7 +12,7 @@ links:
   demo: ""
   slides: ""
   video: ""
-description: "Published in Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 & screw. chiguire53. com."
+description: "Published in Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 \\& screw. chiguire53. com."
 featured: false
 ---
-Published in Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 & screw. chiguire53. com.
+Published in Ford Boots Pre For Tom Women Black Suede owned BqaSdxw78 \& screw. chiguire53. com.

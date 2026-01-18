@@ -2,7 +2,7 @@
 title: "Multi‐omics delineate growth factor network underlying exercise effects in an Alzheimer's mouse model"
 authors: ["Xin Li", "Chaozhong Liu", "Wenbo Li", "Guantong Qi", "Yanwan Dai", "Chaohao Gu", "Yuxiang Sun", "Wenjun Zhou", "Veronica C. Ciliberto", "Jing Liang", "Udhaya Kumar S", "Dongyin Guan", "Zhaoyong Hu", "Hui Zheng", "Zhandong Liu", "Hu Chen", "Ying‐Wooi Wan", "Zheng Sun"]
 year: 2025
-venue: "Alzheimer's & Dementia"
+venue: "Alzheimer's \\& Dementia"
 type: "paper"
 cover: "../../assets/paper-vision.jpg"
 links:

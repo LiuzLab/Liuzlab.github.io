@@ -2,7 +2,7 @@
 title: "Human-specific regulation of MeCP2 levels in fetal brains by microRNA miR-483-5p"
 authors: ["Kihoon Han", "Vincenzo Alessandro Gennarino", "Yoontae Lee", "Kaifang Pang", "Kazue Hashimoto-Torii", "Sanaa Choufani", "Chandrasekhar S Raju", "Michael C Oldham", "Rosanna Weksberg", "Pasko Rakic"]
 year: 2013
-venue: "Genes & development"
+venue: "Genes \\& development"
 type: "paper"
 cover: "../../assets/paper-vision.jpg"
 links:
@@ -12,7 +12,7 @@ links:
   demo: ""
   slides: ""
   video: ""
-description: "Published in Genes & development."
+description: "Published in Genes \\& development."
 featured: false
 ---
-Published in Genes & development.
+Published in Genes \& development.

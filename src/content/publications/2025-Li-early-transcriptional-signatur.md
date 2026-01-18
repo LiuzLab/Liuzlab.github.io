@@ -17,9 +17,9 @@ description: "Abstract
            
             Rett syndrome (RTT) is an X-linked neurological disorder caused by 
             MECP2 
-            mutations. Like other X-linked disorders, RTT patients have sex-specific differences in clinical presentation due to distinct cellular environments, where females have ∼50% of cells expressing either a mutant or wild-type copy of 
+            mutations. Like other X-linked disorders, RTT patients have sex-specific differences in clinical presentation due to distinct cellular environments, where females have ∼50\\% of cells expressing either a mutant or wild-type copy of 
             MECP2 
-            (mosaic) and males have 100% of cells expressing a mutant 
+            (mosaic) and males have 100\\% of cells expressing a mutant 
             MECP2 
             (non-mosaic). Typical RTT females have a short window of normal early development until ∼6-18 months, followed by regression and progressive decline, whereas neonatal encephalopathy is more likely in RTT males. How these sex-specific differences in cellular context contribute molecularly to RTT pathogenesis, particularly in the presymptomatic stages of RTT females, remains poorly understood. Here, we profiled the hippocampal transcriptomes of female ( 
             Mecp2 
@@ -34,9 +34,9 @@ Abstract
            
             Rett syndrome (RTT) is an X-linked neurological disorder caused by 
             MECP2 
-            mutations. Like other X-linked disorders, RTT patients have sex-specific differences in clinical presentation due to distinct cellular environments, where females have ∼50% of cells expressing either a mutant or wild-type copy of 
+            mutations. Like other X-linked disorders, RTT patients have sex-specific differences in clinical presentation due to distinct cellular environments, where females have ∼50\% of cells expressing either a mutant or wild-type copy of 
             MECP2 
-            (mosaic) and males have 100% of cells expressing a mutant 
+            (mosaic) and males have 100\% of cells expressing a mutant 
             MECP2 
             (non-mosaic). Typical RTT females have a short window of normal early development until ∼6-18 months, followed by regression and progressive decline, whereas neonatal encephalopathy is more likely in RTT males. How these sex-specific differences in cellular context contribute molecularly to RTT pathogenesis, particularly in the presymptomatic stages of RTT females, remains poorly understood. Here, we profiled the hippocampal transcriptomes of female ( 
             Mecp2 
