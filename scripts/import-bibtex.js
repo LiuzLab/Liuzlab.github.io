@@ -26,6 +26,13 @@ function cleanString(str) {
   return str.replace(/[{}]/g, '').trim();
 }
 
+// Helper to escape strings for YAML double-quoted scalars
+function escapeYaml(str) {
+  if (!str) return '';
+  // First escape backslashes, then escape double quotes
+  return str.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
 // Helper to parse authors
 function parseAuthors(authorStr) {
   if (!authorStr) return [];
@@ -171,10 +178,10 @@ function importBibtex() {
     
     const frontmatter = [
       '---',
-      `title: "${title.replace(/"/g, '\\"')}"`,
-      `authors: [${authors.map(a => `"${a}"`).join(', ')}]`,
+      `title: "${escapeYaml(title)}"`,
+      `authors: [${authors.map(a => `"${escapeYaml(a)}"`).join(', ')}]`,
       `year: ${year}`,
-      `venue: "${venue.replace(/"/g, '\\"')}"`,
+      `venue: "${escapeYaml(venue)}"`,
       // Only add type for publications, not books
       isBook ? '' : `type: "${type}"`,
       `cover: "${cover}"`,
@@ -186,10 +193,10 @@ function importBibtex() {
       `  slides: "${slides}"`,
       `  video: "${video}"`,
       doi ? `doi: "${doi}"` : '',
-      award ? `award: "${award.replace(/"/g, '\\"')}"` : '',
+      award ? `award: "${escapeYaml(award)}"` : '',
       badges.length > 0 ? 'badges:' : '',
-      ...badges.map(b => `  - { text: "${b.text}", type: "${b.type}" }`),
-      `description: "${description.replace(/"/g, '\\"')}"`,
+      ...badges.map(b => `  - { text: "${escapeYaml(b.text)}", type: "${b.type}" }`),
+      `description: "${escapeYaml(description)}"`,
       // Only add featured for publications, not books
       isBook ? '' : `featured: ${isFeatured}`,
       '---',

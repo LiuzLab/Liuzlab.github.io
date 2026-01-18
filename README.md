@@ -212,28 +212,29 @@ Simply set the entry type to `@book`, and the system will automatically place it
 ### 🎓 More Academic Achievements
 Beyond papers and books, the system supports managing other academic achievements. Simply create Markdown files in the corresponding folders.
 
-#### 1. Software Copyrights
+#### 1. Software
 *   **Location**: `src/content/softwares/`
 *   **Example**:
     ```markdown
     ---
     title: "Intelligent Image Processing System V1.0"
     developers: ["John Doe", "Jane Smith"]
-    number: "2023SR123456"
+    link: "https://example.com/image-processing-system"
     date: 2023-06-15
     description: "An automated image processing platform based on deep learning."
     ---
     ```
 
-#### 2. Invention Patents
-*   **Location**: `src/content/patents/`
+#### 2. Grants/Funds
+*   **Location**: `src/content/grants/`
 *   **Example**:
     ```markdown
     ---
     title: "A Method for Image Recognition Based on Attention Mechanism"
-    inventors: ["John Doe", "Bob Johnson"]
+    pis: ["John Doe", "Bob Johnson"]
     number: "CN102345678B"
-    date: 2024-01-20
+    startDate: 2024-01-20
+    endDate: 2025-01-20
     status: "Granted" # Options: Granted, Pending, Filed
     ---
     ```

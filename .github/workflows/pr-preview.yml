@@ -1,0 +1,197 @@
+name: PR Preview Build and Deploy
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        id: install
+        run: |
+          npm ci 2>&1 | tee install.log
+        continue-on-error: true
+      
+      - name: Build with Astro
+        id: build
+        if: steps.install.outcome == 'success'
+        run: |
+          npm run build 2>&1 | tee build.log
+        continue-on-error: true
+      
+      - name: Upload build artifact
+        if: steps.build.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview-${{ github.event.pull_request.number }}
+          path: ./dist
+          retention-days: 7
+      
+      - name: Post success comment
+        if: steps.build.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const runId = context.runId;
+            const repo = context.repo;
+            
+            // Helper function to find and update/create bot comment
+            // Note: This function is duplicated in the error reporting step below
+            // because GitHub Actions inline scripts are isolated and don't share scope
+            const postOrUpdateComment = async (github, repo, prNumber, commentBody) => {
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: repo.owner,
+                repo: repo.repo,
+                issue_number: prNumber,
+              });
+              
+              const botComment = comments.find(comment => 
+                comment.user.type === 'Bot' && 
+                (comment.body.includes('Build Successful') || comment.body.includes('Build Failed'))
+              );
+              
+              if (botComment) {
+                await github.rest.issues.updateComment({
+                  owner: repo.owner,
+                  repo: repo.repo,
+                  comment_id: botComment.id,
+                  body: commentBody
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner: repo.owner,
+                  repo: repo.repo,
+                  issue_number: prNumber,
+                  body: commentBody
+                });
+              }
+            };
+            
+            const comment = `✅ **Build Successful!**
+            
+            Your PR has been successfully built and is ready for preview.
+            
+            📦 **Artifact:** \`pr-preview-${prNumber}\`
+            🔗 **Workflow Run:** [View Details](https://github.com/${repo.owner}/${repo.repo}/actions/runs/${runId})
+            
+            The build artifact is available for 7 days and can be downloaded from the workflow run.`;
+            
+            await postOrUpdateComment(github, repo, prNumber, comment);
+      
+      - name: Extract and post error logs
+        if: steps.install.outcome == 'failure' || steps.build.outcome == 'failure'
+        uses: actions/github-script@v7
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const prNumber = context.payload.pull_request.number;
+            const runId = context.runId;
+            const repo = context.repo;
+            
+            let errorLog = '';
+            let failedStep = '';
+            
+            // Check which step failed and read the appropriate log
+            if (process.env.INSTALL_OUTCOME === 'failure') {
+              failedStep = 'Installation';
+              try {
+                errorLog = fs.readFileSync('install.log', 'utf8');
+              } catch (e) {
+                errorLog = 'Could not read installation log file.';
+              }
+            } else if (process.env.BUILD_OUTCOME === 'failure') {
+              failedStep = 'Build';
+              try {
+                errorLog = fs.readFileSync('build.log', 'utf8');
+              } catch (e) {
+                errorLog = 'Could not read build log file.';
+              }
+            }
+            
+            // Truncate log if too long
+            // GitHub comment limit is 65536 characters, using 60000 to leave room for markdown formatting and error message wrapper
+            const maxLogLength = 60000;
+            if (errorLog.length > maxLogLength) {
+              const truncated = errorLog.length - maxLogLength;
+              errorLog = errorLog.slice(-maxLogLength);
+              errorLog = `... (truncated ${truncated} characters)\n\n` + errorLog;
+            }
+            
+            const comment = `❌ **Build Failed - ${failedStep} Error**
+            
+            The ${failedStep.toLowerCase()} step failed for this PR. Please review the error log below:
+            
+            <details>
+            <summary>📋 Click to view error log</summary>
+            
+            \`\`\`
+            ${errorLog}
+            \`\`\`
+            
+            </details>
+            
+            🔗 **Workflow Run:** [View Full Details](https://github.com/${repo.owner}/${repo.repo}/actions/runs/${runId})
+            
+            Please fix the errors and push your changes to trigger a new build.`;
+            
+            // Helper function to find and update/create bot comment
+            // Note: Duplicated from success step above - GitHub Actions inline scripts don't share scope
+            const postOrUpdateComment = async (github, repo, prNumber, commentBody) => {
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: repo.owner,
+                repo: repo.repo,
+                issue_number: prNumber,
+              });
+              
+              const botComment = comments.find(comment => 
+                comment.user.type === 'Bot' && 
+                (comment.body.includes('Build Successful') || comment.body.includes('Build Failed'))
+              );
+              
+              if (botComment) {
+                await github.rest.issues.updateComment({
+                  owner: repo.owner,
+                  repo: repo.repo,
+                  comment_id: botComment.id,
+                  body: commentBody
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner: repo.owner,
+                  repo: repo.repo,
+                  issue_number: prNumber,
+                  body: commentBody
+                });
+              }
+            };
+            
+            await postOrUpdateComment(github, repo, prNumber, comment);
+      
+      - name: Fail the workflow if build failed
+        if: steps.install.outcome == 'failure' || steps.build.outcome == 'failure'
+        run: |
+          echo "Build or installation failed. Check the PR comment for details."
+          exit 1

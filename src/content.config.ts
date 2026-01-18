@@ -102,13 +102,14 @@ const research = defineCollection({
   }),
 });
 
-const patents = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/patents" }),
+const grants = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/grants" }),
   schema: z.object({
     title: z.string(),
-    inventors: z.array(z.string()),
-    number: z.string(), // Patent Number
-    date: z.date(),
+    pis: z.array(z.string()),
+    number: z.string(), // Grant Number
+    startDate: z.date(),
+    endDate: z.date(),
     status: z.enum(['Granted', 'Pending', 'Filed']),
     link: z.string().optional(),
   }),
@@ -119,7 +120,7 @@ const softwares = defineCollection({
   schema: z.object({
     title: z.string(),
     developers: z.array(z.string()),
-    number: z.string(), // Registration Number
+    link: z.string(), // Link to the software
     date: z.date(),
     description: z.string().optional(),
   }),
@@ -153,7 +154,7 @@ export const collections = {
   team,
   news,
   research,
-  patents,
+  grants,
   softwares,
   honors,
   activities,
