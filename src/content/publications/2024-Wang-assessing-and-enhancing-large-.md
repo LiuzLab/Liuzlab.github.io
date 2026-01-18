@@ -1,0 +1,21 @@
+---
+title: "Assessing and Enhancing Large Language Models in Rare Disease Question-answering"
+authors: ["Guanchu Wang", "Junhao Ran", "Ruixiang Tang", "Chia-Yuan Chang", "Yu-Neng Chuang", "Zirui Liu", "Vladimir Braverman", "Zhandong Liu", "Xia Hu"]
+year: 2024
+venue: "arXiv"
+type: "paper"
+cover: "../../assets/paper-vision.jpg"
+links:
+  pdf: "Preprint PDF:/Users/hyun-hwanjeong/Zotero/storage/DU7BJ5TL/Wang et al. - 2024 - Assessing and Enhancing Large Language Models in Rare Disease Question-answering.pdf:application/pdf"
+  code: ""
+  website: ""
+  demo: ""
+  slides: ""
+  video: ""
+doi: "10.48550/ARXIV.2408.08422"
+description: "Despite the impressive capabilities of Large Language Models (LLMs) in general medical domains, questions remain about their performance in diagnosing rare diseases. To answer this question, we aim to assess the diagnostic performance of LLMs in rare diseases, and explore methods to enhance their effectiveness in this area. In this work, we introduce a rare disease question-answering (ReDis-QA) dataset to evaluate the performance of LLMs in diagnosing rare diseases. Specifically, we collected 1360 high-quality question-answer pairs within the ReDis-QA dataset, covering 205 rare diseases. Additionally, we annotated meta-data for each question, facilitating the extraction of subsets specific to any given disease and its property. Based on the ReDis-QA dataset, we benchmarked several open-source LLMs, revealing that diagnosing rare diseases remains a significant challenge for these models.
+ To facilitate retrieval augmentation generation for rare disease diagnosis, we collect the first rare diseases corpus (ReCOP), sourced from the National Organization for Rare Disorders (NORD) database. Specifically, we split the report of each rare disease into multiple chunks, each representing a different property of the disease, including their overview, symptoms, causes, effects, related disorders, diagnosis, and standard therapies. This structure ensures that the information within each chunk aligns consistently with a question. Experiment results demonstrate that ReCOP can effectively improve the accuracy of LLMs on the ReDis-QA dataset by an average of 8\%. Moreover, it significantly guides LLMs to generate trustworthy answers and explanations that can be traced back to existing literature."
+featured: false
+---
+Despite the impressive capabilities of Large Language Models (LLMs) in general medical domains, questions remain about their performance in diagnosing rare diseases. To answer this question, we aim to assess the diagnostic performance of LLMs in rare diseases, and explore methods to enhance their effectiveness in this area. In this work, we introduce a rare disease question-answering (ReDis-QA) dataset to evaluate the performance of LLMs in diagnosing rare diseases. Specifically, we collected 1360 high-quality question-answer pairs within the ReDis-QA dataset, covering 205 rare diseases. Additionally, we annotated meta-data for each question, facilitating the extraction of subsets specific to any given disease and its property. Based on the ReDis-QA dataset, we benchmarked several open-source LLMs, revealing that diagnosing rare diseases remains a significant challenge for these models.
+ To facilitate retrieval augmentation generation for rare disease diagnosis, we collect the first rare diseases corpus (ReCOP), sourced from the National Organization for Rare Disorders (NORD) database. Specifically, we split the report of each rare disease into multiple chunks, each representing a different property of the disease, including their overview, symptoms, causes, effects, related disorders, diagnosis, and standard therapies. This structure ensures that the information within each chunk aligns consistently with a question. Experiment results demonstrate that ReCOP can effectively improve the accuracy of LLMs on the ReDis-QA dataset by an average of 8\%. Moreover, it significantly guides LLMs to generate trustworthy answers and explanations that can be traced back to existing literature.
