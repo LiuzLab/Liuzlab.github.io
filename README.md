@@ -225,15 +225,16 @@ Beyond papers and books, the system supports managing other academic achievement
     ---
     ```
 
-#### 2. Invention Patents
-*   **Location**: `src/content/patents/`
+#### 2. Grants/Funds
+*   **Location**: `src/content/grants/`
 *   **Example**:
     ```markdown
     ---
     title: "A Method for Image Recognition Based on Attention Mechanism"
-    inventors: ["John Doe", "Bob Johnson"]
+    pis: ["John Doe", "Bob Johnson"]
     number: "CN102345678B"
-    date: 2024-01-20
+    startDate: 2024-01-20
+    endDate: 2025-01-20
     status: "Granted" # Options: Granted, Pending, Filed
     ---
     ```

@@ -225,15 +225,16 @@ Scholar-Lite 在 `scripts/import-bibtex.js` 中内置了强大的 **BibTeX 导�
     ---
     ```
 
-#### 2. 发明专利 (Invention Patents)
-*   **位置**: `src/content/patents/`
+#### 2. 科研基金 (Grants/Funds)
+*   **位置**: `src/content/grants/`
 *   **示例**:
     ```markdown
     ---
     title: "一种基于注意力机制的图像识别方法"
-    inventors: ["张三", "王五"]
+    pis: ["张三", "王五"]
     number: "CN102345678B"
-    date: 2024-01-20
+    startDate: 2024-01-20
+    endDate: 2025-01-20
     status: "Granted" # 可选: Granted(已授权), Pending(实审中), Filed(已受理)
     ---
     ```
