@@ -1,10 +1,10 @@
 import heroImage from './assets/hero-real.jpg';
 
 export const SITE = {
-  website: 'https://scholar-lite-demo.netlify.app/', // Replace with your actual deployed URL
-  author: 'Scholar-Lite Team',
-  description: 'A lightweight, modern static website template for academic labs and scholars.',
-  title: 'Scholar-Lite',
+  website: 'https://liuzlab.org/', // Replace with your actual deployed URL
+  author: 'Liu Lab',
+  description: 'Dr. Zhandong Liu Laboratory at Baylor College of Medicine.',
+  title: 'Liu Lab @ BCM',
   ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -15,7 +15,7 @@ export const SITE = {
   university: 'Baylor College of Medicine',
   logo: '/assets/logo-real.svg', // Logo path
   avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
-  email: 'contact@lab.edu', // Contact email for Join Us page
+  email: 'zhandonl@bcm.edu', // Contact email for Join Us page
 
   // Hero Section (Home Page) - Main content does not need to be translated for 8 languages by default
   hero: {
@@ -38,13 +38,13 @@ export const SITE = {
 
   // Custom Pages (Appended after 'Join Us')
   customPages: [
-    // Example: { text: 'Alumni', link: '/alumni', key: 'alumni' }
+    { text: 'Alumni', link: '/alumni', key: 'alumni' }
   ],
   
   // i18n Config
   i18n: {
-    enabled: true,
-    defaultLocale: 'zh',
+    enabled: false,
+    defaultLocale: 'en',
   }
 };
 
@@ -63,7 +63,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS = [
   {
     link: 'https://github.com/fjd2004711/scholar-lite',
-    active: true,
+    active: false,
   },
 ];
 
