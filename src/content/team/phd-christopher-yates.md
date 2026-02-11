@@ -6,7 +6,7 @@ avatar: "../../assets/phd-Chris-Yates.png"
 bio: "PhD student specializing in AI and machine learning. I develop AI-powered multi-omic genetic differential diagnostic models capable of diagnosing rare diseases with high precision, LLM frameworks to synthesize knowledge in tables and text into knowledge graphs, and statistical methods to understand the genomic and metabolomic interactions in neurodegenerative diseases."
 email: "Christopher.Yates@bcm.edu"
 linkedin: "https://www.linkedin.com/in/chris-j-yates/"
-github: "https://https://github.com/cjy8s"
+github: "https://github.com/cjy8s"
 # googleScholar: "https://scholar.google.com/citations?user=g5s5W5EAAAAJ&hl=en"
 # orcid: "https://orcid.org/0000-0003-0884-1122"
 weight: 2
