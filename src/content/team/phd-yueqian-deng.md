@@ -2,7 +2,7 @@
 name: "Yueqian Deng"
 role: "PhD Student"
 title: ["PhD Student"]
-avatar: "../../assets/yueqian-deng.jpg"
+avatar: "../../assets/yueqian-deng.png"
 bio: "AI for genomic structural variant diagnosis"
 email: "yueqian.deng@bcm.edu"
 github: "https://github.com/Transitionq"
