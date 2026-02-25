@@ -2,7 +2,7 @@
 name: "Lin Yao"
 role: "Postdoc"
 title: ["Postdoctoral Associate"]
-avatar: "../../assets/pd-lin-yao.jpg"
+avatar: "../../assets/lin-yao.jpg"
 bio: "Harness the LLM to help our kids and families."
 email: "Lin.yao@bcm.edu"
 github: "https://github.com/linyao-tch"
