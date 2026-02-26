@@ -59,15 +59,15 @@ const team = defineCollection({
   schema: ({ image }) => z.object({
     name: z.string(),
     role: z.enum([
-      'Principal Investigator', 
-      'Professor', 
+      'Principal Investigator',
+      'Professor',
       'Associate Professor',
       'Assistant Professor',
-      'Postdoc', 
+      'Postdoc',
       'Research Assistant',
-      'PhD Student', 
-      'Master Student', 
-      'Undergraduate', 
+      'PhD Student',
+      'Master Student',
+      'Undergraduate',
       'Alumni'
     ]),
     title: z.array(z.string()).optional(), // For specific academic titles like "Academician", "Changjiang Scholar"
@@ -133,7 +133,7 @@ const honors = defineCollection({
     award: z.string(), // e.g., "Gold Medal", "First Prize"
     date: z.date(),
     year: z.string(), // Display year on badge
-    type: z.enum(['Challenge Cup', 'Internet+', 'Dream Challenge', 'Other']).default('Other'),
+    type: z.enum(['Challenge Cup', 'Internet+', 'Dream Challenge', 'TMC AI Summit', 'Other']).default('Other'),
     members: z.array(z.string()), // Team members who received the honor
   }),
 });
