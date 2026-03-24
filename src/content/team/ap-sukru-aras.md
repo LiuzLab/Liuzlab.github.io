@@ -3,7 +3,7 @@ name: "Sukru Aras"
 role: "Assistant Professor"
 title: ["Assistant Professor"]
 avatar: "../../assets/sukru_aras.jpg"
-bio: "Statistician and Biosattistician."
+bio: "Statistician and Biostatistician."
 email: "sukru.ars@bcm.edu"
 github: "https://github.com/sukruaras"
 googleScholar: "https://scholar.google.com/citations?user=zctjy8oAAAAJ&hl=en"
