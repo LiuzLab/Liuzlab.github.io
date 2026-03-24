@@ -2,7 +2,7 @@
 name: "Zahid Shaik"
 role: "Research Assistant"
 title: ["Bioinformatics Programmer II"]
-avatar: "../../assets/zahid-shaik.jpg"
+avatar: "../../assets/zahid-shaik.png"
 bio: "Bioinformatics Programmer II and your go-to tech guy, building scalable software systems and tools that help research run smoother and faster."
 email: "zahid.shaik@bcm.edu"
 linkedin: "https://www.linkedin.com/in/zahid-shaik/"
